@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Generator</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">CV Generator</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" name= "phone" class="form-control" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="about">About You</label>
+        <textarea class="form-control" name="about" id="about" rows="3" placeholder="Write a brief description about yourself"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="degree">Degree</label>
+        <input type="text" name="degree" class="form-control" id="degree" placeholder="Enter your degree" required>
+      </div>
+      <div class="form-group">
+        <label for="school">School</label>
+        <input type="text" name="school" class="form-control" id="school" placeholder="Enter your school" required>
+      </div>
+      <div class="form-group">
+        <label for="university">University</label>
+        <input type="text" name="university" class="form-control" id="university" placeholder="Enter your university" required>
+      </div>
+      <div class="form-group">
+        <label for="skills">Skills</label>
+        <input type="text" name="skills" class="form-control" id="skills" placeholder="python,java etc" required>
+      </div>
+      <div class="form-group">
+        <label for="previous_work">Experience</label>
+        <input type="text" name="previous_work" class="form-control" id="previous_work" placeholder="Write your experience" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
